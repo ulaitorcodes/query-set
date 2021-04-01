@@ -1,11 +1,6 @@
-
-
-import requests
-from bs4 import BeautifulSoup
-import csv
-import json
-r = requests.get('https://www.tutorialspoint.com/python_web_scraping/python_web_scraping_data_processing.htm')
-soup = BeautifulSoup(r.text, 'lxml')
-y = json.dumps(soup.title.text)
-with open('JSONFile.txt', 'wt') as outfile:
-   json.dump(y, outfile)
+from selenium import webdriver
+path = r'C:\\Users\\gaurav\\Desktop\\Chromedriver'
+browser = webdriver.Chrome(executable_path = path)
+browser.get('https://tutorialspoint.com/')
+screenshot = browser.save_screenshot('screenshot.png')
+browser.quit
