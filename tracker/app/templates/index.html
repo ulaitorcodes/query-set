@@ -27,13 +27,15 @@
             <li><a href="#" data-toggle="sidebar" class="nav-link nav-link-lg
 									collapse-btn"> <i data-feather="menu"></i></a></li>
             <li>
-              <form class="form-inline mr-auto">
+              <form class="form-inline mr-auto" >
+                {% csrf_token %}
                 <div class="search-element">
-                  <input class="form-control" type="search" placeholder="Search" aria-label="Search" data-width="200">
-                  <button class="btn" type="submit">
+                  <input class="form-control" name="dataInput" type="search" placeholder="Search" aria-label="Search" data-width="200">
+                  <button class="btn" type="submit" name="scrapData">
                     <i class="fas fa-search"></i>
                   </button>
                   {{scrappedContent}}
+                  {% comment %} {{formData}} {% endcomment %}
                 </div>
               </form>
             </li>
