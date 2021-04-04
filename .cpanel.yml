@@ -1,5 +1,5 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/johnetim/public_html/queryset.thecapacityhub.com/
+    - export DEPLOYPATH=/home/johnetim/public_html/queryset/
     - /bin/cp -r * $DEPLOYPATH
